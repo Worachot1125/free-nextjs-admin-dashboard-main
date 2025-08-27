@@ -6,6 +6,7 @@ export default function LoginPage() {
     const router = useRouter();
     // const [email, setEmail] = React.useState("admin@udru.ac.th");
     // const [password, setPassword] = React.useState("admin123");
+    // test dom
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
     const [error, setError] = React.useState<string | null>(null);
@@ -59,6 +60,12 @@ export default function LoginPage() {
                     />
                 </label>
                 {error && <p className="text-sm text-rose-600">{error}</p>}
+                <button
+                    className="mt-2 rounded-lg bg-gray-900 px-4 py-2 text-sm text-white disabled:opacity-60"
+                    disabled={loading}
+                >
+                    {loading ? "Signing in..." : "Sign in"}
+                </button>
                 <button
                     className="mt-2 rounded-lg bg-gray-900 px-4 py-2 text-sm text-white disabled:opacity-60"
                     disabled={loading}
